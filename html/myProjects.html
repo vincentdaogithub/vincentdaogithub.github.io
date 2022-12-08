@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <title>Vincent Dao</title>
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../css/main.css">
     </head>
 
     <body onload="init()">
@@ -16,11 +16,11 @@
         </header>
 
         <nav>
-            <a id="navActive" href="">
+            <a onmouseenter="linkHover(this)" onmouseleave="linkNotHover(this)" href="../index.html">
                 <p>About me</p>
             </a><!--
 
-            --><a onmouseenter="linkHover(this)" onmouseleave="linkNotHover(this)" href="html/myProjects.html">
+            --><a id="navActive" href="">
                 <p>My projects</p>
             </a>
         </nav>
@@ -31,7 +31,7 @@
 
                 <figure>
                     <a href="https://youtu.be/EfsK7-p-UW0" target="_blank">
-                        <img src="img/1_The_Plains_of_Heaven.png" alt="The Plains of Heaven">
+                        <img src="../img/1_The_Plains_of_Heaven.png" alt="The Plains of Heaven">
                     </a>
 
                     <figcaption>
@@ -41,7 +41,7 @@
         
                 <figure>
                     <a href="https://youtu.be/ifjp6rvBLK8" target="_blank">
-                        <img src="img/2_The_Last_Judgement.png" alt="The Last Judgement">
+                        <img src="../img/2_The_Last_Judgement.png" alt="The Last Judgement">
                     </a>
 
                     <figcaption>
@@ -52,7 +52,7 @@
         
                 <figure>
                     <a href="https://youtu.be/iDgV-tll4nU" target="_blank">
-                        <img src="img/3_The_Great_Day_of_His_Wrath.png" alt="The Great Day of His Wrath">
+                        <img src="../img/3_The_Great_Day_of_His_Wrath.png" alt="The Great Day of His Wrath">
                     </a>
 
                     <figcaption>
@@ -73,5 +73,5 @@
         </footer>
     </body>
 
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
 </html>

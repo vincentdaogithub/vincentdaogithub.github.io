@@ -44,6 +44,10 @@ function linkNotHover(navLink) {
 }
 
 window.onscroll = function () {
+    stickyNavBar();
+}
+
+function stickyNavBar() {
     var offset = header.offsetHeight;
 
     if (window.scrollY >= offset) {
@@ -56,3 +60,18 @@ window.onscroll = function () {
     }
 }
 
+window.onresize = function () {
+    setLinkHeightEqualImage();  // when tag <a> has <img> in it
+}
+
+function setLinkHeightEqualImage() {
+    var links = document.getElementsByTagName("a");
+
+    for (i = 0; i < links.length; i++) {
+        var imgs = links[i].getElementsByTagName("img");
+
+        if (imgs.length == 1) {
+            links[i].style.height = imgs[0].offsetHeight + "px";
+        }
+    }
+}
