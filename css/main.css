@@ -7,7 +7,7 @@ html {
     margin: 0;
 }
 
-a {
+#content a {
     display: block;
 }
 
@@ -71,6 +71,7 @@ nav > * {
 nav > * > p {
     color: #ffffff;
     text-align: center;
+    font-size: 1rem;
 
     width: 100%;
 
@@ -96,6 +97,11 @@ nav > * > p {
 
 #content > h1 {
     text-align: center;
+    font-size: 2rem;
+}
+
+figure figcaption {
+    font-size: 1rem;
 }
 
 figure > a {
@@ -128,31 +134,3 @@ footer > a > p {
     top: 50%;
     transform: translate(0, -50%);
 }
-
-/* @media screen and (max-width: 575.98px) {
-    html {
-        font-size: 100%;
-    }
-} */
-
-/* @media screen and (min-width: 768px) {
-    nav > * > p {
-        font-size: 1rem;
-    }
-
-    #content > h1 {
-        font-size: 2rem;
-    }
-
-    #content p {
-        font-size: 1rem;
-    }
-
-    #content figcaption {
-        font-size: 1rem;
-    }
-
-    footer > a > p {
-        font-size: 1rem;
-    }
-} */
