@@ -5,15 +5,17 @@ var rightArrow = "&lt;--"
 // elements
 var header = document.getElementsByTagName("header")[0];
 var nav = document.getElementsByTagName("nav")[0];
-var content = document.getElementsByClassName("mainContent")[0];
+var content = document.getElementById("mainContent");
+var footer = document.getElementsByTagName("footer")[0];
 
 function init() {
-    setNavLinksWidth();
+    setChildrenWidthEqual(nav);
+    setChildrenWidthEqual(footer);
     navLinkActive();
 }
 
-function setNavLinksWidth() {
-    var navChildren = nav.children;
+function setChildrenWidthEqual(element) {
+    var navChildren = element.children;
     var widthLength = 100 / navChildren.length;
 
     for (i = 0; i < navChildren.length; i++) {
@@ -22,7 +24,7 @@ function setNavLinksWidth() {
 }
 
 function navLinkActive() {
-    var activeSentence = document.getElementsByClassName("navActive")[0].getElementsByTagName("p")[0];
+    var activeSentence = document.getElementById("navActive").getElementsByTagName("p")[0];
     activeSentence.innerHTML = leftArrow + activeSentence.innerHTML + rightArrow;
 }
 
