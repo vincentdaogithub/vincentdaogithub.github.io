@@ -1,8 +1,10 @@
 // const
 var leftArrow = "--&gt;";
 var rightArrow = "&lt;--"
-var initialFontSize = 16;
+var minFontSize = 16;
+var maxFontSize = 24;
 var smallDeviceBreakpoint = 768;
+var largeDeviceBreakpoint = 1200;
 
 // elements
 var html = document.getElementsByTagName("html")[0];
@@ -84,5 +86,14 @@ function setLinkHeightEqualImage() {
 }
 
 function setRootFontSize() {
-    html.style.fontSize = initialFontSize + (html.offsetWidth / smallDeviceBreakpoint) + "px";
+    var vw = html.offsetWidth;
+    var difFontSize = maxFontSize - minFontSize;
+
+    if (vw <= smallDeviceBreakpoint) {
+        html.style.fontSize = minFontSize + "px";
+    } else if (smallDeviceBreakpoint < vw && vw <= largeDeviceBreakpoint) {
+        html.style.fontSize = minFontSize + difFontSize * ((vw - smallDeviceBreakpoint) / (largeDeviceBreakpoint - smallDeviceBreakpoint)) + "px";
+    } else {
+        html.style.fontSize = maxFontSize + "px";
+    }
 }
