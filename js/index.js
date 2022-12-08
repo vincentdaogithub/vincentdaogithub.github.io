@@ -28,12 +28,12 @@ function navLinkActive() {
     activeSentence.innerHTML = leftArrow + activeSentence.innerHTML + rightArrow;
 }
 
-function navLinkHover(navLink) {
+function linkHover(navLink) {
     var linkSentence = navLink.getElementsByTagName("p")[0];
     linkSentence.innerHTML = leftArrow + linkSentence.innerHTML + rightArrow;
 }
 
-function navLinkNotHover(navLink) {
+function linkNotHover(navLink) {
     var linkSentence = navLink.getElementsByTagName("p")[0];
     var linkString = linkSentence.innerHTML;
 
