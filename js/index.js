@@ -1,16 +1,22 @@
 // const
 var leftArrow = "--&gt;";
 var rightArrow = "&lt;--"
+var initialFontSize = 16;
+var smallDeviceBreakpoint = 768;
 
 // elements
+var html = document.getElementsByTagName("html")[0];
 var header = document.getElementsByTagName("header")[0];
 var nav = document.getElementsByTagName("nav")[0];
 var content = document.getElementById("mainContent");
 var footer = document.getElementsByTagName("footer")[0];
 
 function init() {
-    setChildrenWidthEqual(nav);
+    setRootFontSize();
+
     setChildrenWidthEqual(footer);
+    setChildrenWidthEqual(nav);
+
     navLinkActive();
 }
 
@@ -62,6 +68,7 @@ function stickyNavBar() {
 
 window.onresize = function () {
     setLinkHeightEqualImage();  // when tag <a> has <img> in it
+    setRootFontSize();
 }
 
 function setLinkHeightEqualImage() {
@@ -74,4 +81,8 @@ function setLinkHeightEqualImage() {
             links[i].style.height = imgs[0].offsetHeight + "px";
         }
     }
+}
+
+function setRootFontSize() {
+    html.style.fontSize = initialFontSize + (html.offsetWidth / smallDeviceBreakpoint) + "px";
 }

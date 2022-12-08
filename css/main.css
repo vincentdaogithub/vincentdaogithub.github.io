@@ -1,5 +1,5 @@
 html {
-    font-size: 2vmin;
+    font-size: calc(20px + calc(1vw / 768));
     font-family: "Consolas", "Courier New", monospace;
 }
 
@@ -46,7 +46,6 @@ header > div {
 header > div > h1 {
     width: 100%;
     text-align: center;
-    font-size: 2rem;
 
     position: absolute;
     top: 50%;
@@ -97,7 +96,6 @@ nav > * > p {
 
 #content > h1 {
     text-align: center;
-    font-size: 2rem;
 }
 
 figure > a {
@@ -107,10 +105,6 @@ figure > a {
 figure > a > img {
     width: 100%;
     height: auto;
-}
-
-figcaption {
-    text-align: justify;
 }
 
 footer {
@@ -134,3 +128,31 @@ footer > a > p {
     top: 50%;
     transform: translate(0, -50%);
 }
+
+/* @media screen and (max-width: 575.98px) {
+    html {
+        font-size: 100%;
+    }
+} */
+
+/* @media screen and (min-width: 768px) {
+    nav > * > p {
+        font-size: 1rem;
+    }
+
+    #content > h1 {
+        font-size: 2rem;
+    }
+
+    #content p {
+        font-size: 1rem;
+    }
+
+    #content figcaption {
+        font-size: 1rem;
+    }
+
+    footer > a > p {
+        font-size: 1rem;
+    }
+} */
