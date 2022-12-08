@@ -92,7 +92,9 @@ function setRootFontSize() {
     if (vw <= smallDeviceBreakpoint) {
         html.style.fontSize = minFontSize + "px";
     } else if (smallDeviceBreakpoint < vw && vw <= largeDeviceBreakpoint) {
-        html.style.fontSize = minFontSize + difFontSize * ((vw - smallDeviceBreakpoint) / (largeDeviceBreakpoint - smallDeviceBreakpoint)) + "px";
+        html.style.fontSize = minFontSize + difFontSize *
+            ((vw - smallDeviceBreakpoint) / (largeDeviceBreakpoint - smallDeviceBreakpoint)) +
+            "px";
     } else {
         html.style.fontSize = maxFontSize + "px";
     }
