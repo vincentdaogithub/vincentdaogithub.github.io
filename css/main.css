@@ -1,6 +1,10 @@
+html {
+    font-size: 2vmin;
+    font-family: "Consolas", "Courier New", monospace;
+}
+
 * {
     margin: 0;
-    font-family: "Consolas", "Courier New", monospace;
 }
 
 a {
@@ -42,6 +46,7 @@ header > div {
 header > div > h1 {
     width: 100%;
     text-align: center;
+    font-size: 2rem;
 
     position: absolute;
     top: 50%;
@@ -90,6 +95,11 @@ nav > * > p {
     margin: 2.5vh 0;
 }
 
+#content > h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
 figure > a {
     width: 100%;
 }
@@ -97,6 +107,10 @@ figure > a {
 figure > a > img {
     width: 100%;
     height: auto;
+}
+
+figcaption {
+    text-align: justify;
 }
 
 footer {
