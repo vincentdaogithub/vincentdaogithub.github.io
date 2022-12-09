@@ -1,10 +1,10 @@
 // const
-var leftArrow = "--&gt;";
-var rightArrow = "&lt;--"
-var minFontSize = 16;
-var maxFontSize = 24;
-var smallDeviceBreakpoint = 768;
-var largeDeviceBreakpoint = 1200;
+const leftArrow = "--&gt;";
+const rightArrow = "&lt;--"
+const minFontSize = 16; 
+const maxFontSize = 24;
+const smallDeviceBreakpoint = 768;
+const largeDeviceBreakpoint = 1200;
 
 // elements
 var html = document.getElementsByTagName("html")[0];
